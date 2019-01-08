@@ -1,0 +1,12 @@
+language: node_js
+node_js: node
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: ahdyqNJez9xjL19A6ElqbIkqwDZG15KQvaKDMf2yCcTjmPANld487MP5T3sO1KjyBdr3IWdzE89QuUXzlRfHlDA4/cWQXRHswb84thoTEiqGKNHiKjIH+7vaEWIMV1FFfr1PMFhlLPehL9idKOgzfRxkePrKoRDjG5qrspZtTFZbBkqPXsndPoYWjHmOQ7HZ94fld7SaPfmIDVDzT6JttGXX6Ce075EnRhaqeifECMsqIJ/AkzkM7CA65mIzuHBRHSPHJklh9X1I7zUG06PzYFH8RQsamS0TVxA5mO62g/cCU4TSXY58jlSFc+UTK+TX8A1I2EZCsc/VVDuCQSxoXsjzuHexmvJytJDH3/0pcEi0E0UFoCRpwr46KtRHB3gyIHpQKhh+pjWVglwhfx+RrMR3y89tUzKh56j2pIV5KPv81TlVhkOFbZs3KWNX7P46BcWxvQRximCcEfi7Pd5RtDEv9T8PLzt7xekZB9bKiLAhho1uHfGFzFKYU9uI5aDQic+Yz8RLVsTsW1LTwGPy8B5oRP5S/r/m/Iqq2C73vsqtTOFO/MX+EL+T27I6dmF3Xz+48u8i1IXWKjQrK581T/NP7c5upfrtOIPitHdZSm/nXD8a/D3gi683zsfFr86yEU3QUq80bMEo2ABtwWwOcmQpBeypvvf7jSicCP8zL0s=
+  app: SureLifeData-Front
+  on:
+    repo: SanDiegoCasey/SureLifeData-Front
