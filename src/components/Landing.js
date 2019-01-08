@@ -5,8 +5,10 @@ import Nav from "./Nav";
 class Landing extends Component {
    render(){
        return (
-        <div>
-            <div className="landing-hero">Some Text</div>
+        <div className="landing-container">
+            <div className="landing-hero">landing content</div>
+            <div className="get-started"><button>Get Started</button></div>
+            <div className="search-button"><button>Search Users</button></div>
         </div>
        
 

@@ -10,7 +10,7 @@ class Nav extends Component {
                 <nav className="dashboard-nav" role="navigation">
                     <div className="parent">
                         <div className="left-nav"><Link to="/dashboard">Home</Link></div>
-                        <div className="center-nav"><img src="../SureLifeDataLogo-White-300w.png" alt="SureLifeData Logo"/></div>
+                        <div className="center-nav"><Link to="/"><img src="../SureLifeDataLogo-White-300w.png" alt="SureLifeData Logo"/></Link></div>
                         <div className="right-nav"><Link to="/search">Search</Link></div>
                     </div>
                 </nav>  

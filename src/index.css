@@ -1,20 +1,26 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #ebe0da;
-}
-
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Open Sans",
-  sans-serif;
-  font-size: 20px;
-  color: #444;
+body, html {
+  margin: 0;
+  padding: 0;
+  /* background-color: #ebe0da; */
+  font-family: "Open Sans",  sans-serif;
+  font-size: 1em;
+  color: #333;
   text-align: center;
-  line-height: 1.5;
+  height: 100%;
+}
+
+
+
+#root{
+  height: 100%;
+}
+
+.App{
+  height:100%;
 }
 
 .signin{
@@ -60,6 +66,22 @@ input[type=text]:focus, input[type=password]:focus {
   text-decoration: none;
   font-size: .9em;
 }
+
+.left-foot{
+  margin-left: 10px;
+  font-size: .9em;
+}
+
+.right-foot{
+  margin-right: 10px;
+  color:#fff;
+  font-size: .9em;
+}
+
+.right-foot a, .left-foot a, .right-foot, .left-foot{
+  color:#fff;
+  text-decoration: none;
+}
 .parent{
   display: flex;
   justify-content: space-between;
@@ -86,13 +108,21 @@ select{
   margin: 10px;
 }
 
+.landing-container{
+  height: 100%;
+}
+
 .landing-hero{
-  background-image: url("./public/hero.jpg")
+  background-image: url("./hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50%;
+  background-position: 50% 10%;
 }
 
 nav {
   padding: 1% 0;
-  background-color: #6699ff;
+  background-color: #4c809f;
   display: flex;
   justify-content: space-between;
   width:100%;
