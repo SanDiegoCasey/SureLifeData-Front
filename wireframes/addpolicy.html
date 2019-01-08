@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SureLifeData landing page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <nav class="dashboard-nav" role="navigation">
+    <div class="parent">
+      <div class="left-nav"><a href="dashboard.html">Home</a></div>
+      <div class="center-nav">logo</div>
+      <div class="right-nav"><a href="search.html">Search</a></div>
+    </div>
+  </nav>
+  <main role="main">
+    <header role="banner" class="add-header">
+      <h1>Add a new policy</h1>
+    </header>
+    <section>
+      <form action="/action_page.php">
+        <div class="container">
+          <label for="companyname"><b>Company</b></label>
+          <input type="text" placeholder="Company Name" name="companyname" required>
+
+          <label for="policynumber"><b>Policy#</b></label>
+          <input type="text" placeholder="Policy #" name="policynumber" required>
+
+          <label for="insurance-type"><b>Insurance Type</b></label>
+          <select name="insurance-type">
+            <option value="volvo">Term</option>
+            <option value="saab">Whole</option>
+            <option value="mercedes">Accidental</option>
+            <option value="audi">Disability</option>
+          </select>
+
+          <label for="value"><b>Policy Value</b></label>
+          <input type="text" placeholder="$0.00" name="value" required>
+
+          <label for="phone"><b>Contact Phone #</b></label>
+          <input type="text" placeholder="(XXX)-XXX-XXXX" name="phone">
+        </div>
+      </form>
+      <div class="addbutton">
+        <button class="addbutton">ADD</button>
+      </div>
+    </section>
+  </main>
+  <footer role="content-info">Footer</footer>
+</body>
+
+</html>

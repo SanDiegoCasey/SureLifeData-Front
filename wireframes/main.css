@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans",
+  sans-serif;
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.signin{
+  text-align: center;
+}
+
+.registerbtn{
+  width: 100%;
+}
+
+.container {
+  padding: 16px;
+  text-align: left;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+.access-text{
+  text-align: left;
+}
+
+.left-nav{
+  margin-left: 10px;
+}
+
+.right-nav{
+  margin-right: 10px;
+}
+
+.parent{
+  display: flex;
+  justify-content: space-between;
+}
+
+.addbutton{
+  text-align: right;
+}
+
+select{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+}
+
+
+.nav-logo{
+margin: 10px;
+}
+
+.sign-in {
+  margin: 10px;
+}
+
+nav {
+  padding: 1% 0;
+  background-color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.dash-header{
+  text-align: left;
+}
+
+.add-header{
+  text-align: left;
+  margin-top: 20px;
+}
+
+.dashboard-nav {
+  display: inline-block;
+}
+
+.mypolicies-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.editbutton{
+  text-align: right;
+}
+
+.policyresults-container{
+  /* display: flex; */
+}
+
+.contacts-container{
+  display:flex;
+  justify-content: space-around;
+}
+
+.photo{
+  height: 150px;
+  width: 150px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.policy{
+  width:100%;
+  padding:10px;
+  background-color: #666;
+  color: #fff;
+  text-align: left;
+  margin: 5px;
+}
+
+footer {
+  padding: 1% 0;
+  background-color: #aaa;
+}
+
+header {
+  padding: 45px 15px 10px 15px;
+}
+
+.searchuser{
+  text-align: left;
+}
+
+section {
+  min-height: 200px;
+  padding: 30px 15px;
+  background-color: #bbb;
+}
+
+section:nth-child(even) {
+  background-color: #ddd;
+}
+
+p {
+  margin: 0 auto;
+}
+
+p + p {
+  margin-top: 15px;
+}

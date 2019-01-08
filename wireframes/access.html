@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SureLifeData access page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <nav class="dashboard-nav" role="navigation">
+    <div class="parent">
+      <div class="left-nav"><a href="dashboard.html">Home</a></div>
+      <div class="center-nav">logo</div>
+      <div class="right-nav"><a href="search.html">Search</a></div>
+    </div>
+  </nav>
+  <main role="main">
+    <header role="banner" class="add-header">
+      <h1>Account Access</h1>
+    </header>
+    <section class ="access-text">
+      <h2>Searchable</h2>
+      <p>Site users will be able to search if an account exists using your name and birthday. Users will not be able to see any information without verifying your chosen criteria.</p>
+      <p>Your contacts will have access your account information by default.</p>
+      <h2>Account Access</h2>
+      <p>Choose the requirements that users who are not contacts must provide to access your account information.</p>
+    </section>
+    <section>
+      <form action="/action_page.php">
+        <div class="container">
+          <span>Full Name</span> <span class="required">*required</span><br />
+          <span>Birthday</span> <span class="required">*required</span><br />
+          <input type="checkbox" name="phone" value="phone" checked > Phone Number<br />
+          <input type="checkbox" name="social" value="social" > Social Security Number<br />
+          <input type="checkbox" name="email" value="email" > Email Address<br />
+          <input type="checkbox" name="emailcheck" value="emailcheck" > *Email Verification<br /><br/>
+          <p>*Email verfication will cause SureLifeData to send your account email at john@smith.com. This email will notify you that a request has been made to gain access to your account information. If we do not receive a reply in your chosen number of days we will grant access to the user</p>
+          <p></p>
+          <label for="nodays"><b>Number of days to wait for email response</b></label>
+          <select name="nodays">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="7">7</option>
+            <option value="14">14</option>
+          </select>
+        </div>
+      </form>
+      <div class="addbutton">
+        <button class="addbutton" onClick="location.href='dashboard.html'">UPDATE</button>
+      </div>
+    </section>
+  </main>
+  <footer role="content-info">Footer</footer>
+</body>
+
+</html>

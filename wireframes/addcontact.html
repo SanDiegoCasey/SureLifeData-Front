@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SureLifeData add contact page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <nav class="dashboard-nav" role="navigation">
+    <div class="parent">
+      <div class="left-nav"><a href="dashboard.html">Home</a></div>
+      <div class="center-nav">logo</div>
+      <div class="right-nav"><a href="search.html">Search</a></div>
+    </div>
+  </nav>
+  <main role="main">
+    <header role="banner" class="add-header">
+      <h1>Add a new contact</h1>
+    </header>
+    <section>
+      <form action="/action_page.php">
+        <div class="container">
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Contact Name" name="name" required>
+
+          <label for="email"><b>e-mail Address</b></label>
+          <input type="text" placeholder="email" name="email" required>
+        </div>
+      </form>
+      <div class="addbutton">
+        <button class="addbutton" onClick="location.href='dashboard.html'">ADD</button>
+      </div>
+    </section>
+  </main>
+  <footer role="content-info">Footer</footer>
+</body>
+
+</html>

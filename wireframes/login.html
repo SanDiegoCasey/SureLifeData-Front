@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>HTML wireframe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+      <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+    <nav role="navigation">
+      <div class="nav-logo">logo</div>
+      <div class="sign-in"><a href="register.html">Sign Up</a></div>
+    </nav>
+    <main role="main">
+      <header role="banner">
+        <h1>Log in to SureLifeData</h1>
+      </header>
+      <section>
+        <div class="container">
+          <h2>Login</h2>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="button" onClick="location.href='dashboard.html'" class="registerbtn">Sign In</button>
+        </div>
+        <div class="signin">
+          Don't have an account? <a href="register.html">Sign Up</a>
+        </div>
+      </section>
+    </main>
+    <footer role="content-info">Footer</footer>
+  </body>
+
+</html>
