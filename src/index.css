@@ -174,6 +174,7 @@ body, html {
 
 
 
+
 /* ------------------- End Landing ------------------- */
 /* ------------------- Nav  ------------------- */
 
@@ -239,7 +240,7 @@ select{
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: none;
+	border-style: groove;
 }
 
 .register-button-holder{
@@ -624,6 +625,54 @@ header {
 
 
 /* ------------------- End Add Contact Us ------------------- */
+
+/*--- search ---*/
+
+.search-result-button{
+	-moz-box-shadow: 3px 4px 0px 0px #264050;
+	-webkit-box-shadow: 3px 4px 0px 0px #264050;
+	box-shadow: 3px 4px 0px 0px #264050;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #789fb7), color-stop(1, #4c819f));
+	background:-moz-linear-gradient(top, #789fb7 5%, #4c819f 100%);
+	background:-webkit-linear-gradient(top, #789fb7 5%, #4c819f 100%);
+	background:-o-linear-gradient(top, #789fb7 5%, #4c819f 100%);
+	background:-ms-linear-gradient(top, #789fb7 5%, #4c819f 100%);
+	background:linear-gradient(to bottom, #789fb7 5%, #4c819f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#789fb7', endColorstr='#4c819f',GradientType=0);
+	background-color:#789fb7;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #4c819f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	margin-bottom: 30px;
+	width:50%;
+}
+
+.search-result-button a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-result-button:hover{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4c819f), color-stop(1, #789fb7));
+	background:-moz-linear-gradient(top, #4c819f 5%, #789fb7 100%);
+	background:-webkit-linear-gradient(top, #4c819f 5%, #789fb7 100%);
+	background:-o-linear-gradient(top, #4c819f 5%, #789fb7 100%);
+	background:-ms-linear-gradient(top, #4c819f 5%, #789fb7 100%);
+	background:linear-gradient(to bottom, #4c819f 5%, #789fb7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c819f', endColorstr='#789fb7',GradientType=0);
+	background-color:#4c819f;
+}
+/*--- End search ---*/
+
 /* ------------------- Footer ------------------- */
 
 .footer-parent{

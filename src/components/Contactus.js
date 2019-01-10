@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class Contact extends Component {
+class Contactus extends Component {
    render(){
        return (
         <div> 
@@ -13,4 +13,4 @@ class Contact extends Component {
 }
 
 
-export default Contact;
+export default Contactus;

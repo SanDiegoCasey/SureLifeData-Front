@@ -5,8 +5,12 @@ import Search from './Search';
 import Landing from './Landing';
 import Login from './Login';
 import Register from './Register';
-import Contact from './Contact';
-import Access from './Access'
+import Contactus from './Contactus';
+import Access from './Access';
+import Addpolicy from './Addpolicy';
+import Addcontact from './Addcontact';
+import Editpolicy from './Editpolicy';
+import Result from './Result';
 
 const Content = () => {
   return (
@@ -16,8 +20,12 @@ const Content = () => {
       <Route path="/search" component={Search} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
-      <Route exact path="/contact" component={Contact} />
+      <Route exact path="/contactus" component={Contactus} />
       <Route exact path="/access" component={Access}/>
+      <Route exact path="/addpolicy" component={Addpolicy}/>
+      <Route exact path="/addcontact" component={Addcontact}/>
+      <Route exact path="/editpolicy" component={Editpolicy}/>
+      <Route exact path="/result" component={Result}/>
     </Switch>
   )
 }

@@ -63,7 +63,7 @@ class Dashboard extends Component {
                 <section>
                     <div className="contacts-container">
                         <div className="contactstitle">My Contacts</div>
-                        <div className="policyadd"><a href="addcontact.html">Add+</a></div>
+                        <div className="policyadd"><Link to="/addcontact">Add+</Link></div>
                     </div>
                     <div className="contacts-container-photos">
                         <div className="contact">
