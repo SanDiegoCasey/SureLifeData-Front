@@ -67,17 +67,17 @@ class Dashboard extends Component {
                     </div>
                     <div className="contacts-container-photos">
                         <div className="contact">
-                            <div className="photo"></div>
+                            <div className="photo-1"></div>
                             <div className="name">John Smith</div>
                             <div className="deletebutton"><Link to="/delete">DELETE</Link></div>
                         </div>
                         <div className="contact">
-                            <div className="photo"></div>
+                            <div className="photo-2"></div>
                             <div className="name">Jane Smith</div>
                             <div className="deletebutton"><Link to="/delete">DELETE</Link></div>
                         </div>
                         <div className="contact">
-                            <div className="photo"></div>
+                            <div className="photo-3"></div>
                             <div className="name">Joe Smith</div>
                             <div className="deletebutton"><Link to="/delete">DELETE</Link></div>
                         </div>

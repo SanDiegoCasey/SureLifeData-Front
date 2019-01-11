@@ -543,6 +543,36 @@ header {
   display: inline-block;
 }
 
+.photo-1{
+  height: 150px;
+  width: 150px;
+  background-color: #ed308f;
+  border-radius: 50%;
+	display: inline-block;
+	background-image: url("./square-man1.jpg");
+	background-size: contain;
+}
+
+.photo-2{
+  height: 150px;
+  width: 150px;
+  background-color: #ed308f;
+  border-radius: 50%;
+	display: inline-block;
+	background-image: url("./square-woman.jpg");
+	background-size: contain;
+}
+
+.photo-3{
+  height: 150px;
+  width: 150px;
+  background-color: #ed308f;
+  border-radius: 50%;
+	display: inline-block;
+	background-image: url("./square-man2.jpg");
+	background-size: contain;
+}
+
 .policiestitle{
   color:#264050;
   font-family: 'Noto Sans', sans-serif;
