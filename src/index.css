@@ -698,7 +698,7 @@ header {
 }
 
 @media screen and (max-width: 520px) {
-  .photo{
+  .photo, .photo-1, .photo-2, .photo-3 {
     height: 100px;
     width: 100px;
     background-color: #ed308f;
@@ -708,7 +708,7 @@ header {
 }
 
 @media screen and (max-width: 450px) {
-  .photo{
+  .photo, .photo-1, .photo-2, .photo-3{
     height: 80px;
     width: 80px;
     background-color: #ed308f;
