@@ -9,7 +9,7 @@ class Search extends Component {
                 <div className="footer-parent">
                     <div className="left-foot">Copyright © 2018 <a href="http://www.caseywhitcher.com" target="_blank">www.caseywhitcher.com</a></div>
                     <div className="center-nav"></div>
-                    <div className="right-foot"><Link to="/contact">Contact</Link></div>
+                    <div className="right-foot"><Link to="/contactus">Contact</Link></div>
                 </div>
             </nav>         
         </div>

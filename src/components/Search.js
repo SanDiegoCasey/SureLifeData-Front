@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Search extends Component {
    render(){
        return (
-        <div> 
+        <div className="content-container"> 
             <section>
                 <div class="container">
                     <h1>Search for a user </h1>

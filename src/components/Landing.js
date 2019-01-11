@@ -5,10 +5,11 @@ import Nav from "./Nav";
 class Landing extends Component {
    render(){
        return (
-        <div className="landing-container">
+        <div className="content-container">
             <div className="landing-hero">
-                <div className="landing-tagline"><h2>
-                    Be sure they find your policies when they need them most.
+                <div className="landing-tagline">
+                    <h2 className="h2-landing">
+                        Be sure they find your policies when they need them most.
                     </h2>
                 </div>
             </div>

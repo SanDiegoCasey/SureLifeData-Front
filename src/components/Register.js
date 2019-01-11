@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Register extends Component {
    render(){
        return (
-        <div> 
+        <div className="content-container"> 
             <section>
                 <form action="">
                 <div class="container">

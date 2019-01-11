@@ -17,7 +17,7 @@ class Dashboard extends Component {
 
    render(){
        return (
-        <div>
+        <div className="content-container">
             <main role="main">
                 <header role="banner" className="dash-header">
                         <h1>Welcome back {this.state.user},</h1>
@@ -25,7 +25,7 @@ class Dashboard extends Component {
                 <section className="policies">
                     <div className="mypolicies-container">
                         <div className="policiestitle">My Policies</div>
-                        <div className="policyadd"><Link to="/addpolicy">Add+</Link></div>
+                        <div className="policyadd"><Link to="/addpolicy">Add Policy+</Link></div>
                     </div>
                     <div className="policyresults-container">
                         <div className="policy">
@@ -63,7 +63,7 @@ class Dashboard extends Component {
                 <section>
                     <div className="contacts-container">
                         <div className="contactstitle">My Contacts</div>
-                        <div className="policyadd"><Link to="/addcontact">Add+</Link></div>
+                        <div className="policyadd"><Link to="/addcontact">Add Contact+</Link></div>
                     </div>
                     <div className="contacts-container-photos">
                         <div className="contact">
@@ -83,6 +83,7 @@ class Dashboard extends Component {
                         </div>
                     </div>
                 </section>
+                <hr />
                 <section>
                     <div className="access-container">
                         <div className="accesstitle">Emergency Access</div>

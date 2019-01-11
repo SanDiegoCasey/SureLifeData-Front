@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Login extends Component {
     render(){
         return (
-         <div> 
+         <div className="content-container"> 
              <section>
                  <form action="">
                  <div class="container">
@@ -17,7 +17,7 @@ class Login extends Component {
                      <input type="password" placeholder="Enter Password" name="psw" required />
  
                     <div className="register-button-holder">
-                         <div className="register-button"><Link to="/dashboard">Log In</Link></div>
+                    <Link to="/dashboard"><div className="register-button">Log In</div></Link>
                      </div>
                  </div>
  
