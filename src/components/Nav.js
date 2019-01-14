@@ -12,7 +12,6 @@ class Nav extends Component {
                         <div className="right-nav-search"><Link to="/search">Search</Link></div>
                         <div className="right-nav-login"><Link to="/login">Log In</Link></div>
                         <div className="right-nav-signup"><Link to="/register">Sign Up</Link></div>
-
                     </div>
                 </nav>  
             </div>   

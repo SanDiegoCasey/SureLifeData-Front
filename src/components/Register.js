@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { registerUser } from '../actions'
+import { connect } from 'react-redux'
 
 class Register extends Component {
+
+    handleSubmit(event) {
+        event.preventDefault()
+        const username= event.target.username.value
+        const password= event.target.password.value
+        
+        this.props.dispatch(registerUser(username, password))
+      }
+
    render(){
        return (
         <div className="content-container"> 
             <section>
-                <form action="">
-                <div class="container">
+                <form onSubmit={(e) => this.handleSubmit(e)}>
+                <div className="container">
                     <h1>Register</h1>
+                    <label htmlFor="username"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="username" required />
 
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required />
+                    <label htmlFor="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter A Password" name="password" required />
 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required />
-
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required />
+                    {/* <label htmlFor="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required /> */}
                     <div className="register-button-holder">
-                        <div className="register-button"><Link to="/login">Sign Up</Link></div>
+                        <input className="register-button" type="submit" value="Sign Up" />
                     </div>
                 </div>
 
@@ -35,4 +45,4 @@ class Register extends Component {
 }
 
 
-export default Register;
+export default connect()(Register);

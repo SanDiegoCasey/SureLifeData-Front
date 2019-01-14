@@ -16,18 +16,18 @@ import Result from './Result';
 const Content = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Landing} />
-      <Route exact path="/dashboard" component={Dashboard} />
-      <Route path="/search" component={Search} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/register" component={Register} />
-      <Route exact path="/contactus" component={Contactus} />
-      <Route exact path="/access" component={Access}/>
-      <Route exact path="/addpolicy" component={Addpolicy}/>
-      <Route exact path="/addcontact" component={Addcontact}/>
-      <Route exact path="/editpolicy" component={Editpolicy}/>
-      <Route exact path="/result" component={Result}/>
-    </Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/dashboard" component={Dashboard} />
+        <Route path="/search" component={Search} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/contactus" component={Contactus} />
+        <Route exact path="/access" component={Access}/>
+        <Route exact path="/addpolicy" component={Addpolicy}/>
+        <Route exact path="/addcontact" component={Addcontact}/>
+        <Route exact path="/editpolicy" component={Editpolicy}/>
+        <Route exact path="/result" component={Result}/>
+      </Switch>
   )
 }
 

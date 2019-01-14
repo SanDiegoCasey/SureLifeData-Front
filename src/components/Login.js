@@ -28,10 +28,9 @@ class Login extends Component {
                      <label htmlFor="psw"><b>Password</b></label>
                      <input type="password" placeholder="Enter Password" name="password" required />
  
-                    {/* <div className="register-button-holder">
-                    <Link to="/dashboard"><div className="register-button">Log In</div></Link>
-                     </div> */}
-                     <button>Login</button>
+                    <div className="register-button-holder">
+                        <input className="register-button" type="submit" value="Log In" />
+                     </div>
                  </div>
  
                  <div className="signin">
