@@ -1,5 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom';
+
 import Dashboard from './Dashboard';
 import Search from './Search';
 import Landing from './Landing';

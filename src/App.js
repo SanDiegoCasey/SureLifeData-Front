@@ -5,7 +5,7 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import { connect } from 'react-redux'
 import { registerUser, loginUserSuccess, getDashboard } from './actions'
-import Login from './components/Login'
+// import Login from './components/Login'
 
 class App extends Component {
 
@@ -36,14 +36,14 @@ handleGetDashboard(){
       <div className="App">
         <Nav />
         <Content />
-        <form onSubmit={(e) => this.handleSubmit(e)}>
+        {/* <form onSubmit={(e) => this.handleSubmit(e)}>
           <input type="text" name="username" />
           <input type="password" name="password" />
           <button>register</button>
         </form>
         <Login />
         <button onClick={() => this.handleLogout()}>logout</button>
-        <button onClick={() => this.handleGetDashboard()}>TEST PROTECT</button>
+        <button onClick={() => this.handleGetDashboard()}>TEST PROTECT</button> */}
 
         <Footer />
       </div>
