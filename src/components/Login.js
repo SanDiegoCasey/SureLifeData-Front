@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { connect } from 'react-redux'
+import {loginUser} from '../actions'
 
 class Login extends Component {
+
+    handleSubmit(event) {
+        event.preventDefault()
+        const username= event.target.username.value
+        const password= event.target.password.value
+        
+        this.props.dispatch(loginUser(username, password))
+      }
+      
+
     render(){
         return (
          <div className="content-container"> 
              <section>
-                 <form action="">
-                 <div class="container">
+                 <form onSubmit={(e) => this.handleSubmit(e)}>
+                 <div className="container">
                      <h1>Log In</h1>
  
-                     <label for="email"><b>Email</b></label>
-                     <input type="text" placeholder="Enter Email" name="email" required />
+                     <label htmlFor="email"><b>Email</b></label>
+                     <input type="text" placeholder="Enter Email" name="username" required />
  
-                     <label for="psw"><b>Password</b></label>
-                     <input type="password" placeholder="Enter Password" name="psw" required />
+                     <label htmlFor="psw"><b>Password</b></label>
+                     <input type="password" placeholder="Enter Password" name="password" required />
  
-                    <div className="register-button-holder">
+                    {/* <div className="register-button-holder">
                     <Link to="/dashboard"><div className="register-button">Log In</div></Link>
-                     </div>
+                     </div> */}
+                     <button>Login</button>
                  </div>
  
                  <div className="signin">
@@ -33,4 +46,4 @@ class Login extends Component {
  }
 
 
-export default Login;
+export default connect()(Login);
