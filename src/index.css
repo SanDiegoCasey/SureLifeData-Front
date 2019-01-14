@@ -65,13 +65,28 @@ body, html {
 /* ------------------- End Globals ------------------- */
 /* ------------------- Landing ------------------- */
 
+.description{
+	/* margin-top: 30px; */
+	/* padding: 20px; */
+	text-align: left;
+	font-size: .8em;
+}
 
-
-.get-started{
-  height:150px;
+.get-started-desc{
+	padding:20px 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
+	justify-content: center;
+	flex-direction: column;  
+  background-color: #d3dfe9;
+}
+
+.get-started{
+  height:100px;
+  display: flex;
+  align-items: center;
+	justify-content: center;
+	flex-direction: column;
   
   background-color: #d3dfe9;
 }

@@ -8,8 +8,7 @@ class Login extends Component {
     handleSubmit(event) {
         event.preventDefault()
         const username= event.target.username.value
-        const password= event.target.password.value
-        
+        const password= event.target.password.value        
         this.props.dispatch(loginUser(username, password))
       }
       
