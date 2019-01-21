@@ -77,7 +77,7 @@ body, html {
   display: flex;
   align-items: center;
 	justify-content: center;
-	flex-direction: column;  
+	flex-direction: column;
   background-color: #d3dfe9;
 }
 
@@ -87,7 +87,7 @@ body, html {
   align-items: center;
 	justify-content: center;
 	flex-direction: column;
-  
+
   background-color: #d3dfe9;
 }
 
@@ -637,7 +637,7 @@ header {
   display: inline-block;
 }
 
-.mypolicies-container{
+.policies-section-title{
   display: flex;
   justify-content: space-between;
 }
@@ -890,4 +890,3 @@ header {
   width:100%;
 }
 /* ------------------- End Footer ------------------- */
-

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import PolicySection from './PolicySection';
 
 
 
@@ -22,8 +23,9 @@ class Dashboard extends Component {
                 <header role="banner" className="dash-header">
                         <h1>Welcome back {this.state.user},</h1>
                 </header>
-                <section className="policies">
-                    <div className="mypolicies-container">
+                <PolicySection/>
+                <section className="policies-section">
+                    <div className="policies-section-title">
                         <div className="policiestitle">My Policies</div>
                         <div className="policyadd"><Link to="/addpolicy">Add Policy+</Link></div>
                     </div>
