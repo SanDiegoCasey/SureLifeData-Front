@@ -556,6 +556,7 @@ header {
   background-color: #ed308f;
   border-radius: 50%;
   display: inline-block;
+  background-size: contain;
 }
 
 .photo-1{
@@ -640,6 +641,11 @@ header {
 .policies-section-title{
   display: flex;
   justify-content: space-between;
+}
+
+.record-title{
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
 .contacts-container{
