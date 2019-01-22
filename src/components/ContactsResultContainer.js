@@ -1,31 +1,17 @@
 import React, { Component } from 'react';
-import uuid from 'uuid';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getContacts, deleteContacts } from '../actions/contactActions';
+import PropTypes from 'prop-types';
 
 class ContactsResultContainer extends Component {
 
-  state = {
-    contacts: [
-      {id: uuid(),
-        img: './square-man1.jpg',
-        name: 'John Smith'
-      },
-      {
-        id: uuid(),
-        img: './square-man2.jpg',
-        name: 'Joe Smith'
-      },
-      {
-        id: uuid(),
-        img: './square-woman.jpg',
-        name: 'Jane Smith'
-      }
-    ]
-
+  componentDidMount() {
+    this.props.getContacts();
   }
 
   render(){
-    const {contacts} = this.state;
+    const {contacts} = this.props.contact;
     return(
       <section>
         <div className="contacts-container">
@@ -48,4 +34,13 @@ class ContactsResultContainer extends Component {
 
 }
 
-export default ContactsResultContainer
+ContactsResultContainer.propTypes = {
+  getContacts: PropTypes.func.isRequired,
+  contact: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+  contact: state.contact
+})
+
+export default connect(mapStateToProps, { getContacts, deleteContacts })(ContactsResultContainer);
