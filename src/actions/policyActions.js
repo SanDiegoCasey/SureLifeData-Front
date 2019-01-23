@@ -12,3 +12,10 @@ export const deletePolicy = (id) => {
     payload: id
   };
 };
+
+export const addPolicy = policy => {
+  return {
+    type: ADD_POLICY,
+    payload: policy
+  }
+}

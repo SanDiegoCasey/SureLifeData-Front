@@ -5,9 +5,9 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import { connect } from 'react-redux'
 import { Route, withRouter } from 'react-router-dom'
-import { registerUser, loginUserSuccess, getDashboard } from './actions'
+import { registerUser, loginUserSuccess, getDashboard } from './actions';
 
-class App extends Component { 
+class App extends Component {
 
   state = {
     username: 'Jacob'

@@ -11,6 +11,10 @@ class PolicyResultContainer extends Component {
   componentDidMount() {
     this.props.getPolicies();
   }
+
+  onDeleteClickPolicy = (id) => {
+    this.props.deletePolicy(id);
+  };
   // constructor(props){
   //   super(props);
 
@@ -22,8 +26,11 @@ class PolicyResultContainer extends Component {
           <div className="policy" key={id}>
               <div className="policy-title-row">
                   <div className="record-title">{company}</div>
-                  <button className="editbutton"><Link to="/editpolicy">DELETE</Link></button>
-              </div>
+                  <input type="button"
+                    value="DELETE"
+                    onClick={this.onDeleteClickPolicy.bind(this,id)}
+                    className="editbutton"/>
+                </div>
               <div className="record">Type: {typeofins}</div>
               <div className="record">Policy #: {policynum}</div>
               <div className="record">Value: {value}</div>

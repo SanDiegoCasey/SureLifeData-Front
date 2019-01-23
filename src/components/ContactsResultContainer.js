@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getContacts, deleteContacts } from '../actions/contactActions';
+import { getContacts, deleteContact } from '../actions/contactActions';
 import PropTypes from 'prop-types';
 
 class ContactsResultContainer extends Component {
 
   componentDidMount() {
     this.props.getContacts();
+  }
+
+  onDeleteClickContact = (id) => {
+    this.props.deleteContact(id)
   }
 
   render(){
@@ -23,7 +27,10 @@ class ContactsResultContainer extends Component {
             <div className="contact" key={id}>
                 <div className="photo" style={{backgroundImage: `url(${img})`}}></div>
                 <div className="name">{name}</div>
-                <div className="deletebutton"><Link to="/delete">DELETE</Link></div>
+                <input type="button"
+                  value="DELETE"
+                  onClick={this.onDeleteClickContact.bind(this,id)}
+                  className="deletebutton"/>
             </div>
           ))}
         </div>
@@ -43,4 +50,4 @@ const mapStateToProps = (state) => ({
   contact: state.contact
 })
 
-export default connect(mapStateToProps, { getContacts, deleteContacts })(ContactsResultContainer);
+export default connect(mapStateToProps, { getContacts, deleteContact })(ContactsResultContainer);
