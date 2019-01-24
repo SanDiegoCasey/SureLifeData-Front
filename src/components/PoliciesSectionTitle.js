@@ -8,7 +8,6 @@ class PolicesSectionTitle extends Component {
       <div className="policies-section-title">
           <div className="policiestitle">My Policies</div>
           <PolicyModal/>
-          <div className="policyadd"><Link to="/addpolicy">Add Policy+</Link></div>
       </div>
     )
   }

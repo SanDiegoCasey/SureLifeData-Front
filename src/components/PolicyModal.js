@@ -71,73 +71,77 @@ class PolicyModal extends Component {
     return(
       <div>
         <Button
+          style={{marginBottom: '.5rem'}}
           onClick={this.toggle}
+          className="policyadd"
           >Add Policy</Button>
           <Modal
             isOpen={this.state.modal}
             toggle={this.toggle}
             >
             <ModalHeader toggle={this.toggle}>
-              Add a policy
+              Add A New Policy
             </ModalHeader>
             <ModalBody>
               <Form onSubmit={this.onSubmit}>
                 <FormGroup>
                   <Label for="company">Company</Label>
-                  <input
+                  <Input
                     type="text"
                     name="company"
                     id="company"
                     placeholder="Add name of company"
-                    onChange={this.onChange}
+                    onChange={this.onChangeCompany}
                     />
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="typeofins">Type of Insurance</Label>
-                  <input
+                  <Input
                     type="text"
                     name="typeofins"
                     id="typeofins"
                     placeholder="Add type, Term, Whole, Dissability"
-                    onChange={this.onChange}
+                    onChange={this.onChangeTypeOfIns}
                     />
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="policynum">Policy Number</Label>
-                  <input
+                  <Input
                     type="text"
                     name="policynum"
                     id="policynum"
                     placeholder="Add Policy Number"
-                    onChange={this.onChange}
+                    onChange={this.onChangePolicyNum}
                     />
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="contactnum">Contact Number</Label>
-                  <input
+                  <Input
                     type="text"
                     name="contactnum"
                     id="contactnum"
                     placeholder="Add contact phone number"
-                    onChange={this.onChange}
+                    onChange={this.onChangeContactNum}
                     />
                 </FormGroup>
 
                 <FormGroup>
-                  <Label for="dollarvalue">|Value of Policy</Label>
-                  <input
+                  <Label for="dollarvalue">Value of Policy</Label>
+                  <Input
                     type="text"
                     name="dollarvalue"
                     id="dollarvalue"
                     placeholder="Add Value of policy in $"
-                    onChange={this.onChange}
+                    onChange={this.onChangeDollarValue}
                     />
                 </FormGroup>
 
                 <Button
+                className="policyadd"
+                style={{marginTop:'1rem'}}
                   block
                   >Add Policy
                 </Button>

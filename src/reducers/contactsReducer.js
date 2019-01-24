@@ -14,6 +14,11 @@ const initialState = {
     },
     {
       id: uuid(),
+      img: './square-man2.jpg',
+      name: 'johan Smith'
+    },
+    {
+      id: uuid(),
       img: './square-woman.jpg',
       name: 'Jane Smith'
     }
@@ -30,6 +35,11 @@ export default function(state = initialState, action) {
         return {
             ...state,
             contacts: state.contacts.filter(contact => contact.id !== action.payload)
+        }
+      case ADD_CONTACT:
+        return {
+          ...state,
+          contacts: [action.payload, ...state.contacts]
         }
       default:
         return state;

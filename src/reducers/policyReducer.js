@@ -38,6 +38,11 @@ export default function (state = initialState, action) {
         ...state,
         policies: state.policies.filter(policy => policy.id !== action.payload)
       }
+    case ADD_POLICY:
+      return {
+        ...state,
+        policies: [action.payload, ...state.policies]
+      }
     default:
       return state;
   }

@@ -12,3 +12,10 @@ export const deleteContact = (id) =>  {
     payload: id
   }
 }
+
+export const addContact = contact => {
+  return {
+    type: ADD_CONTACT,
+    payload: contact
+  }
+}

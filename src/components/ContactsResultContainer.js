@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getContacts, deleteContact } from '../actions/contactActions';
+import { getContacts, deleteContact, addContact } from '../actions/contactActions';
 import PropTypes from 'prop-types';
+import ContactModal from '../components/ContactModal.js';
 
 class ContactsResultContainer extends Component {
 
@@ -15,18 +15,19 @@ class ContactsResultContainer extends Component {
   }
 
   render(){
-    const {contacts} = this.props.contact;
+    const { contacts } = this.props.contact;
     return(
       <section>
         <div className="contacts-container">
             <div className="contactstitle">My Contacts</div>
-            <div className="policyadd"><Link to="/addcontact">Add Contact+</Link></div>
+            <ContactModal/>
         </div>
         <div className="contacts-container-photos">
-          {contacts.map(({id, img, name}) => (
+          {contacts.map(({id, name, img}) => (
             <div className="contact" key={id}>
                 <div className="photo" style={{backgroundImage: `url(${img})`}}></div>
                 <div className="name">{name}</div>
+                <div className="name">{img}</div>
                 <input type="button"
                   value="DELETE"
                   onClick={this.onDeleteClickContact.bind(this,id)}
@@ -50,4 +51,4 @@ const mapStateToProps = (state) => ({
   contact: state.contact
 })
 
-export default connect(mapStateToProps, { getContacts, deleteContact })(ContactsResultContainer);
+export default connect(mapStateToProps, { getContacts, deleteContact, addContact })(ContactsResultContainer);
