@@ -1,37 +1,18 @@
 import uuid from 'uuid';
-import { GET_POLICIES, ADD_POLICY, DELETE_POLICY, EDIT_POLICY } from '../actions/types';
+import { GET_POLICIES, ADD_POLICY, DELETE_POLICY, EDIT_POLICY, POLICIES_LOADING } from '../actions/types';
 
 const initialState = {
-  policies:  [
-      {id: uuid(),
-        company: 'Thug Life',
-        typeofins: 'whole life',
-        policynum: "234234",
-        contactnum: "23423423",
-        dollarvalue: "$500,000"
-      },
-      {id: uuid(),
-        company: 'Mollies Policies',
-        typeofins: 'term',
-        policynum: "whodat",
-        contactnum: "dere",
-        dollarvalue: "1 Million dollars bwahahaha"
-      },
-      {id: uuid(),
-        company: 'Fo Surance',
-        typeofins: 'disability',
-        policynum: "asdfasfasdf",
-        contactnum: "u2b34",
-        dollarvalue: "bout tree fity"
-      }
-    ]
+  policies:  [],
+  loading: false
 }
 
 export default function (state = initialState, action) {
   switch (action.type) {
     case GET_POLICIES:
       return {
-        ...state
+        ...state,
+        items: action.payload,
+        loading: false
       }
     case DELETE_POLICY:
       return {
@@ -42,6 +23,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         policies: [action.payload, ...state.policies]
+      }
+    case POLICIES_LOADING:
+      return {
+        ...state,
+        loading: true
       }
     default:
       return state;

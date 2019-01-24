@@ -30,23 +30,23 @@ class PolicyModal extends Component {
   }
 
   onChangeCompany = (e) => {
-    this.setState({[e.target.company]: e.target.value})
+    this.setState({[e.target.name]: e.target.value})
   }
 
   onChangeTypeOfIns = (e) => {
-    this.setState({[e.target.typeofins]: e.target.value})
+    this.setState({[e.target.name]: e.target.value})
   }
 
   onChangePolicyNum = (e) => {
-    this.setState({[e.target.policynum]: e.target.value})
+    this.setState({[e.target.name]: e.target.value})
   }
 
   onChangeContactNum = (e) => {
-    this.setState({[e.target.contactnum]: e.target.value})
+    this.setState({[e.target.name]: e.target.value})
   }
 
   onChangeDollarValue = (e) => {
-    this.setState({[e.target.dollarvalue]: e.target.value})
+    this.setState({[e.target.name]: e.target.value})
   }
 
   onSubmit = (e) => {

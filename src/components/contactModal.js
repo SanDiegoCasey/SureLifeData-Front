@@ -31,7 +31,7 @@ class ContactModal extends Component {
   }
 
   onChangeImg = (e) => {
-    this.setState({[e.target.img]: e.target.value})
+    this.setState({[e.target.name]: e.target.value})
   }
 
   onSubmit = (e) => {

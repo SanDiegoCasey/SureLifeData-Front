@@ -1,30 +1,18 @@
 import uuid from 'uuid';
-import { GET_CONTACTS, ADD_CONTACT, DELETE_CONTACT } from '../actions/types';
+import { GET_CONTACTS, ADD_CONTACT, DELETE_CONTACT, CONTACTS_LOADING } from '../actions/types';
 
 const initialState = {
-  contacts: [
-    {id: uuid(),
-      img: './square-man1.jpg',
-      name: 'John Smith'
-    },
-    {
-      id: uuid(),
-      img: './square-man2.jpg',
-      name: 'johan Smith'
-    },
-    {
-      id: uuid(),
-      img: './square-woman.jpg',
-      name: 'Jane Smith'
-    }
-  ]
+  contacts: [],
+  loading: false
 }
 
 export default function(state = initialState, action) {
   switch (action.type) {
       case GET_CONTACTS:
         return {
-          ...state
+          ...state,
+          items: action.payload,
+          loading: false
         }
       case DELETE_CONTACT:
         return {
@@ -35,6 +23,11 @@ export default function(state = initialState, action) {
         return {
           ...state,
           contacts: [action.payload, ...state.contacts]
+        }
+      case CONTACTS_LOADING:
+        return {
+          ...state,
+          loading: true
         }
       default:
         return state;
