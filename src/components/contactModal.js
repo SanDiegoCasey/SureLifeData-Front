@@ -67,6 +67,7 @@ class ContactModal extends Component {
             </ModalHeader>
             <ModalBody>
               <Form onSubmit={this.onSubmit}>
+
                 <FormGroup>
                   <Label for="name">Name</Label>
                   <Input

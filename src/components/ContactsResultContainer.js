@@ -27,7 +27,7 @@ class ContactsResultContainer extends Component {
             <div className="contact" key={id}>
                 <div className="photo" style={{backgroundImage: `url(${img})`}}></div>
                 <div className="name">{name}</div>
-                <div className="name">{img}</div>
+                <div className="testing">{img}</div>
                 <input type="button"
                   value="DELETE"
                   onClick={this.onDeleteClickContact.bind(this,id)}

@@ -10,11 +10,6 @@ const initialState = {
     {
       id: uuid(),
       img: './square-man2.jpg',
-      name: 'Joe Smith'
-    },
-    {
-      id: uuid(),
-      img: './square-man2.jpg',
       name: 'johan Smith'
     },
     {
