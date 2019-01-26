@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 class PolicyResultContainer extends Component {
 
+
   componentDidMount() {
     this.props.getPolicies();
   }
@@ -17,24 +18,25 @@ class PolicyResultContainer extends Component {
   //   super(props);
 
   render(){
-    const { items } = this.props.policy;
+    console.log(this.props);
+
     return(
       <div className="policyresults-container">
-        { items.map(({ _id, company, typeofins, policynum, dollarvalue, contactnum }) => (
-          <div className="policy" key={_id}>
-              <div className="policy-title-row">
-                  <div className="record-title">{company}</div>
-                  <input type="button"
-                    value="DELETE"
-                    onClick={this.onDeleteClickPolicy.bind(this,_id)}
-                    className="editbutton"/>
-                </div>
-              <div className="record">Type: {typeofins}</div>
-              <div className="record">Policy #: {policynum}</div>
-              <div className="record">Value: {dollarvalue}</div>
-              <div className="record">Contact: {contactnum}</div>
-          </div>
-        ))}
+      { this.props.items.map(({ id, company, typeofins, policynum, dollarvalue, contactnum }) => (
+  <div className="policy" key={id}>
+      <div className="policy-title-row">
+          <div className="record-title">{company}</div>
+          <input type="button"
+            value="DELETE"
+            onClick={this.onDeleteClickPolicy.bind(this,id)}
+            className="editbutton"/>
+        </div>
+      <div className="record">Type: {typeofins}</div>
+      <div className="record">Policy #: {policynum}</div>
+      <div className="record">Value: {dollarvalue}</div>
+      <div className="record">Contact: {contactnum}</div>
+  </div>
+))}
       </div>
     )
   }
@@ -55,7 +57,7 @@ PolicyResultContainer.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  policy: state.policy
+  items: state.policy.items || []
 })
 
 export default connect(mapStateToProps, { getPolicies, deletePolicy })(PolicyResultContainer)

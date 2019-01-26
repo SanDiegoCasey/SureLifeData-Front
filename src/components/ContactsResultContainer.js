@@ -15,7 +15,8 @@ class ContactsResultContainer extends Component {
   }
 
   render(){
-    const { contacts } = this.props.contact;
+    console.log(this);
+    const { items } = this.props.contact;
     return(
       <section>
         <div className="contacts-container">
@@ -23,14 +24,16 @@ class ContactsResultContainer extends Component {
             <ContactModal/>
         </div>
         <div className="contacts-container-photos">
-          {contacts.map(({id, name, img}) => (
-            <div className="contact" key={id}>
-                <div className="photo" style={{backgroundImage: `url(${img})`}}></div>
+          {items.map(({_id, name, email, img}) => (
+            <div className="contact" key={_id}>
+                <div className="photo" style={{backgroundImage: `url(${img})`
+              , backgroundSize: 'cover',
+            overflow: 'hidden'}}></div>
                 <div className="name">{name}</div>
-                <div className="testing">{img}</div>
+                <div className="name">{email}</div>
                 <input type="button"
                   value="DELETE"
-                  onClick={this.onDeleteClickContact.bind(this,id)}
+                  onClick={this.onDeleteClickContact.bind(this,_id)}
                   className="deletebutton"/>
             </div>
           ))}

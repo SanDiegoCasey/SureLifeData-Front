@@ -1,8 +1,7 @@
-import uuid from 'uuid';
-import { GET_CONTACTS, ADD_CONTACT, DELETE_CONTACT, CONTACTS_LOADING } from '../actions/types';
+import { GET_CONTACTS, ADD_CONTACT, DELETE_CONTACT, ITEMS_LOADING } from '../actions/types';
 
 const initialState = {
-  contacts: [],
+  items: [],
   loading: false
 }
 
@@ -17,14 +16,14 @@ export default function(state = initialState, action) {
       case DELETE_CONTACT:
         return {
             ...state,
-            contacts: state.contacts.filter(contact => contact.id !== action.payload)
+            items: state.items.filter(contact => contact._id !== action.payload)
         }
       case ADD_CONTACT:
         return {
           ...state,
-          contacts: [action.payload, ...state.contacts]
+          items: [action.payload, ...state.items]
         }
-      case CONTACTS_LOADING:
+      case ITEMS_LOADING:
         return {
           ...state,
           loading: true

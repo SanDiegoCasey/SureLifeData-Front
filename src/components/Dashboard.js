@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import PolicySection from './PolicySection';
 import ContactsResultContainer from './ContactsResultContainer';
 import Emergency from './Emergency';

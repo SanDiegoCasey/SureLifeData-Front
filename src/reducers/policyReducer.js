@@ -1,8 +1,7 @@
-import uuid from 'uuid';
-import { GET_POLICIES, ADD_POLICY, DELETE_POLICY, EDIT_POLICY, POLICIES_LOADING } from '../actions/types';
+import { GET_POLICIES, ADD_POLICY, DELETE_POLICY, ITEMS_LOADING } from '../actions/types';
 
 const initialState = {
-  policies:  [],
+  items:  [],
   loading: false
 }
 
@@ -17,14 +16,14 @@ export default function (state = initialState, action) {
     case DELETE_POLICY:
       return {
         ...state,
-        policies: state.policies.filter(policy => policy.id !== action.payload)
+        items: state.items.filter(policy => policy._id !== action.payload)
       }
     case ADD_POLICY:
       return {
         ...state,
-        policies: [action.payload, ...state.policies]
+        items: [action.payload, ...state.items]
       }
-    case POLICIES_LOADING:
+    case ITEMS_LOADING:
       return {
         ...state,
         loading: true

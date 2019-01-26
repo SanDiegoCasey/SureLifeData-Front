@@ -11,7 +11,6 @@ import {
   Label,
   Input
 } from 'reactstrap';
-import uuid from 'uuid';
 
 class PolicyModal extends Component {
   state = {
@@ -53,7 +52,6 @@ class PolicyModal extends Component {
     e.preventDefault();
 
     const newPolicy = {
-      id: uuid(),
       company: this.state.company,
       typeofins: this.state.typeofins,
       policynum: this.state.policynum,

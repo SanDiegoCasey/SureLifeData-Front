@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import { connect } from 'react-redux'
-import { Route, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { registerUser, loginUserSuccess, getDashboard } from './actions';
 
 class App extends Component{

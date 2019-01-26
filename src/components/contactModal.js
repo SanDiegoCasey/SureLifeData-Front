@@ -11,12 +11,12 @@ import {
   Label,
   Input
 } from 'reactstrap'
-import uuid from 'uuid';
 
 class ContactModal extends Component {
   state = {
     modal: false,
     name: '',
+    email: '',
     img: ''
   }
 
@@ -30,6 +30,10 @@ class ContactModal extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+  onChangeEmail = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
   onChangeImg = (e) => {
     this.setState({[e.target.name]: e.target.value})
   }
@@ -38,9 +42,9 @@ class ContactModal extends Component {
     e.preventDefault();
 
     const newContact = {
-      id: uuid(),
       name: this.state.name,
-      img: this.state.img
+      img: this.state.img,
+      email: this.state.email
     }
 
     this.props.addContact(newContact);
@@ -78,13 +82,26 @@ class ContactModal extends Component {
                     onChange={this.onChangeName}
                     />
                 </FormGroup>
+
                 <FormGroup>
-                  <Label for="img">link to image</Label>
+                  <Label for="name">eMail</Label>
                   <Input
+                    type="text"
+                    name="email"
+                    id="name"
+                    placeholder="Add email to contact"
+                    onChange={this.onChangeEmail}
+                    />
+                </FormGroup>
+
+                <FormGroup>
+                  <Label for="img">Hyperlink to Image (Optional)</Label>
+                  <Input
+                    onfocus="this.value='';"
                     type="text"
                     name="img"
                     id="img"
-                    placeholder="Add path to image"
+                    placeholder="example: http://www.mysite.com/mypicture.jpg"
                     onChange={this.onChangeImg}
                     />
                 </FormGroup>
