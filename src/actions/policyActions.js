@@ -4,7 +4,7 @@ import { GET_POLICIES, ADD_POLICY, DELETE_POLICY, ITEMS_LOADING } from './types'
 export const getPolicies = () => dispatch => {
   dispatch(setItemsLoading);
   axios
-    .get('/api/policies/')
+    .get('http://localhost:8080/api/policies/')
     .then(res =>
           dispatch({
         type: GET_POLICIES,
@@ -16,7 +16,7 @@ export const getPolicies = () => dispatch => {
 
 export const addPolicy = policy => dispatch => {
   axios
-    .post('/api/policies', policy)
+    .post('http://localhost:8080/api/policies', policy)
     .then(res => dispatch({
       type: ADD_POLICY,
       payload: res.data
@@ -24,7 +24,7 @@ export const addPolicy = policy => dispatch => {
 }
 
 export const deletePolicy = (id) => dispatch => {
-  axios.delete(`api/policies/${id}`).then(res =>
+  axios.delete(`http://localhost:8080/api/policies/${id}`).then(res =>
     dispatch({
     type: DELETE_POLICY,
     payload: id

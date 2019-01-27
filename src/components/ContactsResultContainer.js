@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getContacts, deleteContact, addContact } from '../actions/contactActions';
+import { getContacts, deleteContact, addContact, inviteUser } from '../actions/contactActions';
 import PropTypes from 'prop-types';
 import ContactModal from '../components/ContactModal.js';
 
@@ -12,6 +12,10 @@ class ContactsResultContainer extends Component {
 
   onDeleteClickContact = (id) => {
     this.props.deleteContact(id)
+  }
+
+  onInviteClick = (email) => {
+    this.props.inviteUser(email)
   }
 
   render(){
@@ -32,9 +36,14 @@ class ContactsResultContainer extends Component {
                 <div className="name">{name}</div>
                 <div className="name">{email}</div>
                 <input type="button"
+                  value="INVITE"
+                  onClick={this.onInviteClick.bind(this,email)}
+                  className="invitebutton"/>
+                <input type="button"
                   value="DELETE"
                   onClick={this.onDeleteClickContact.bind(this,_id)}
                   className="deletebutton"/>
+
             </div>
           ))}
         </div>
@@ -54,4 +63,4 @@ const mapStateToProps = (state) => ({
   contact: state.contact
 })
 
-export default connect(mapStateToProps, { getContacts, deleteContact, addContact })(ContactsResultContainer);
+export default connect(mapStateToProps, { inviteUser, getContacts, deleteContact, addContact })(ContactsResultContainer);

@@ -22,7 +22,8 @@ class ContactModal extends Component {
 
   toggle = () => {
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
+      img: ''
     });
   }
 
@@ -35,7 +36,7 @@ class ContactModal extends Component {
   }
 
   onChangeImg = (e) => {
-    this.setState({[e.target.name]: e.target.value})
+    this.setState(!e.target.value ? {[e.target.name]:'http://www.caseywhitcher.com/caseywhitcher/projects/familiarfaces/images/mj01.jpg'} : {[e.target.name]: e.target.value})
   }
 
   onSubmit = (e) => {
@@ -97,7 +98,6 @@ class ContactModal extends Component {
                 <FormGroup>
                   <Label for="img">Hyperlink to Image (Optional)</Label>
                   <Input
-                    onfocus="this.value='';"
                     type="text"
                     name="img"
                     id="img"

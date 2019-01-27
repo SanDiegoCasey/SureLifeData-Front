@@ -400,21 +400,26 @@ main {
 
 .name {
 	font-size: 1em;
+  overflow:auto;
 }
 
 @media screen and (max-width: 400px) {
-  .name{
+  .contact .name{
+    width: 180px;
     font-size: .8em;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .name{
+  .contact .name{
+    width: 160px;
     font-size: .7em;
   }
 }
 
-.deletebutton{
+
+
+.deletebutton, .invitebutton{
 	-moz-box-shadow: 3px 4px 0px 0px #264050;
 	-webkit-box-shadow: 3px 4px 0px 0px #264050;
 	box-shadow: 3px 4px 0px 0px #264050;
@@ -440,12 +445,7 @@ main {
 	text-decoration:none;
 }
 
-.deletebutton a{
-  color: #fff;
-  text-decoration: none;
-}
-
-.deletebutton:hover{
+.invitebutton:hover, .deletebutton:hover{
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4c819f), color-stop(1, #789fb7));
 	background:-moz-linear-gradient(top, #4c819f 5%, #789fb7 100%);
 	background:-webkit-linear-gradient(top, #4c819f 5%, #789fb7 100%);
@@ -456,8 +456,27 @@ main {
 	background-color:#4c819f;
 }
 
+.invitebutton, .invitebutton:hover {
+  margin-right: 3px;
+}
+
+.deletebutton, .deletebutton:hover {
+  margin-left: 3px;
+}
+
 header {
   padding: 45px 0px 10px 0px;
+
+}
+
+.dash-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-header{
+  text-align: left;
+  margin-top: 20px;
 }
 
 
@@ -550,6 +569,11 @@ header {
 .policyresults-container{
 }
 
+.profilePhoto{
+  display:flex;
+  flex-direction: column;
+}
+
 .photo{
   height: 150px;
   width: 150px;
@@ -588,6 +612,11 @@ header {
   padding-left:10px;
 }
 
+.contact{
+  margin: 10px;
+  width: 200px;
+}
+
 .policy{
   width:100%;
   padding:10px;
@@ -608,14 +637,7 @@ header {
   text-align: right;
 }
 
-.dash-header{
-  text-align: left;
-}
 
-.add-header{
-  text-align: left;
-  margin-top: 20px;
-}
 
 .dashboard-nav {
   display: inline-block;
@@ -639,7 +661,9 @@ header {
 
 .contacts-container-photos{
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding:10px;
   margin-top:30px;
 }
 
