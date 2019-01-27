@@ -4,7 +4,7 @@ import { GET_CONTACTS, DELETE_CONTACT, ADD_CONTACT, ITEMS_LOADING} from './types
 export const getContacts = () => dispatch => {
   dispatch(setContactsLoading);
   axios
-    .get('http://localhost:8080/api/contacts/')
+    .get('https://desolate-escarpment-23385.herokuapp.com/api/contacts/')
     .then(res =>
       dispatch({
         type: GET_CONTACTS,
@@ -16,7 +16,7 @@ export const getContacts = () => dispatch => {
 
 export const addContact = contact => dispatch => {
   axios
-    .post('http://localhost:8080/api/contacts', contact)
+    .post('https://desolate-escarpment-23385.herokuapp.com/api/contacts', contact)
     .then(res => dispatch({
       type: ADD_CONTACT,
       payload: res.data
@@ -24,7 +24,7 @@ export const addContact = contact => dispatch => {
   }
 
 export const deleteContact = (id) => dispatch => {
-  axios.delete(`http://localhost:8080/api/contacts/${id}`).then(res =>
+  axios.delete(`https://desolate-escarpment-23385.herokuapp.com/api/contacts/${id}`).then(res =>
     dispatch({
       type: DELETE_CONTACT,
       payload: id
