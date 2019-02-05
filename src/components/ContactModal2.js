@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addContact } from '../actions/contactActions';
+import { registerUser, registerTest } from '../actions'
 import {
   Button,
   Modal,
@@ -12,7 +13,7 @@ import {
   Input
 } from 'reactstrap'
 
-class ContactModal extends Component {
+class ContactModal2 extends Component {
   state = {
     modal: false,
     firstname: '',
@@ -23,7 +24,8 @@ class ContactModal extends Component {
 
   toggle = () => {
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
+      img: ''
     });
   }
 
@@ -44,18 +46,13 @@ class ContactModal extends Component {
   }
 
   onSubmit = (e) => {
-    e.preventDefault();
-
-    const newContact = {
-      username: this.state.username,
-      firstname: this.state.firstname,
-      lastname: this.state.lastname,
-      img: this.state.img
-    }
-
-    console.log(newContact);
-
-    this.props.addContact(newContact);
+    e.preventDefault()
+    const firstname = e.target.firstname.value
+    const lastname = e.target.lastname.value
+    const username = e.target.username.value
+    const password = "password"
+    // console.log(username, password, firstname, lastname);
+    this.props.dispatch(registerTest())
 
     this.toggle();
 
@@ -107,7 +104,7 @@ class ContactModal extends Component {
                   <Input
                     type="text"
                     name="username"
-                    id="email"
+                    id="username"
                     placeholder="Add email to contact"
                     onChange={this.onChangeUsername}
                     />
@@ -143,4 +140,4 @@ const mapStateToProps = state => ({
 })
 
 
-export default connect(mapStateToProps, {addContact})(ContactModal)
+export default connect(mapStateToProps, {addContact})(ContactModal2)

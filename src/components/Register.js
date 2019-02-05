@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { registerUser } from '../actions'
 import { connect } from 'react-redux'
 
@@ -7,24 +7,27 @@ class Register extends Component {
 
     handleSubmit(event) {
         event.preventDefault()
+        const firstname = event.target.firstname.value
+        const lastname = event.target.lastname.value
         const username= event.target.username.value
-        const password= event.target.password.value        
-        this.props.dispatch(registerUser(username, password))
+        const password= event.target.password.value
+        // console.log(username, password, firstname, lastname);
+        this.props.dispatch(registerUser(username, password, firstname, lastname))
       }
 
    render(){
        return (
-        <div className="content-container"> 
+        <div className="content-container">
             <section>
                 <form onSubmit={(e) => this.handleSubmit(e)}>
                 <div className="container">
-                    <h1>Register</h1>               
+                    <h1>Register</h1>
 
                     <label htmlFor="firstname"><b>First Name</b></label>
                      <input type="text" placeholder="Enter First Name" name="firstname" required />
 
-                     {/* <label htmlFor="lastname"><b>Last Name</b></label>
-                     <input type="text" placeholder="Enter First Name" name="lastname" required /> */}
+                     <label htmlFor="lastname"><b>Last Name</b></label>
+                     <input type="text" placeholder="Enter Last Name" name="lastname" required />
 
                      <label htmlFor="username"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="username" required />
@@ -44,7 +47,7 @@ class Register extends Component {
                 </div>
                 </form>
 
-            </section>       
+            </section>
         </div>
        )
    }

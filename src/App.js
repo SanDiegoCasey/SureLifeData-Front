@@ -5,26 +5,27 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { registerUser, loginUserSuccess, getDashboard } from './actions';
+import { loginUserSuccess, getDashboard } from './actions';
+
+
+
 
 class App extends Component{
-
-  state = {
-    username: 'Jacob'
-  }
 
 componentDidMount(){
   const authToken = localStorage.getItem('token')
   this.props.dispatch(loginUserSuccess(authToken))
 }
 
-handleSubmit(event) {
-  event.preventDefault()
-  const username= event.target.username.value
-  const password= event.target.password.value
-
-  this.props.dispatch(registerUser(username, password))
-}
+// handleSubmit(event) {
+//   event.preventDefault()
+//   const firstname= event.target.firstname.value
+//   const lastname= event.target.lastname.value
+//   const username= event.target.username.value
+//   const password= event.target.password.value
+//
+//   this.props.dispatch(registerUser(firstname, lastname, username, password))
+// }
 
 handleLogout(){
   localStorage.removeItem('token')

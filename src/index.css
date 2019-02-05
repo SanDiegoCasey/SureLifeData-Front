@@ -277,6 +277,20 @@ nav {
   margin-right: 10px;
   color:#fff;
   min-width:50px;
+  font-size: 1em;
+}
+
+.button-right-nav-login{
+  font-size: 1em;
+  margin-right: 10px;
+  color:#fff;
+  min-width:50px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  overflow: hidden;
+  outline:none;
+
 }
 
 .right-nav-signup{
@@ -289,7 +303,7 @@ nav {
 .right-nav-search a, .right-nav-login a, .right-nav-signup a, .left-nav a{
   color:#fff;
   text-decoration: none;
-  font-size: .9em;
+  font-size: 1em;
 }
 
 /* ------------------- End Nav ------------------- */
@@ -401,6 +415,15 @@ main {
 .name {
 	font-size: 1em;
   overflow:auto;
+  margin: auto;
+}
+
+.name-email {
+   padding-bottom: 2px;
+}
+
+.name-span {
+  padding: 0px 2px;
 }
 
 @media screen and (max-width: 400px) {
@@ -589,7 +612,7 @@ header {
 .photo-1{
   height: 150px;
   width: 150px;
-  background-color: #ed308f;
+  background-color: #4e82a0;
   border-radius: 50%;
 	display: inline-block;
 	background-image: url("./square-man1.jpg");
@@ -729,7 +752,7 @@ header {
   .photo, .photo-1, .photo-2, .photo-3 {
     height: 100px;
     width: 100px;
-    background-color: #ed308f;
+    background-color: #4e82a0;
     border-radius: 50%;
     display: inline-block;
   }
@@ -739,7 +762,7 @@ header {
   .photo, .photo-1, .photo-2, .photo-3{
     height: 80px;
     width: 80px;
-    background-color: #ed308f;
+    background-color: #4e82a0;
     border-radius: 50%;
     display: inline-block;
   }
@@ -896,7 +919,7 @@ header {
 .footer-div{
   width:100%;
 	/* background-color: #4c809f; */
-	background-color: #ed308f;
+	background-color: #4e82a0;
  }
 
 .footer-nav{

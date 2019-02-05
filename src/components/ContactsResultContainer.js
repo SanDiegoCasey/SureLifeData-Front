@@ -14,8 +14,8 @@ class ContactsResultContainer extends Component {
     this.props.deleteContact(id)
   }
 
-  onInviteClick = (email) => {
-    this.props.inviteUser(email)
+  onInviteClick = (username) => {
+    this.props.inviteUser(username)
   }
 
   render(){
@@ -28,16 +28,19 @@ class ContactsResultContainer extends Component {
             <ContactModal/>
         </div>
         <div className="contacts-container-photos">
-          {items.map(({_id, name, email, img}) => (
+          {items.map(({_id, firstname, lastname, username, img}) => (
             <div className="contact" key={_id}>
                 <div className="photo" style={{backgroundImage: `url(${img})`
               , backgroundSize: 'cover',
             overflow: 'hidden'}}></div>
-                <div className="name">{name}</div>
-                <div className="name">{email}</div>
+                <div className="name">
+                  <span className="name-span">{firstname}</span>
+                  <span className="name-span">{lastname}</span>
+                </div>
+                <div className="name-email">{username}</div>
                 <input type="button"
                   value="INVITE"
-                  onClick={this.onInviteClick.bind(this,email)}
+                  onClick={this.onInviteClick.bind(this,username)}
                   className="invitebutton"/>
                 <input type="button"
                   value="DELETE"

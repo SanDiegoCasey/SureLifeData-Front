@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import LogInLogOut from './LogInLogOut';
 
 class Nav extends Component {
+
+  handleLogout(){
+    localStorage.removeItem('token');
+  }
+
    render(){
        return (
             <div>
@@ -9,13 +15,10 @@ class Nav extends Component {
                     <div className="parent">
                         <div className="left-nav"><Link to="/dashboard">Home</Link></div>
                         <div className="center-nav"><Link to="/"><img src="../SureLifeDataLogo-White-300w.png" alt="SureLifeData Logo"/></Link></div>
-                        <div className="right-nav-search"><Link to="/search">Search</Link></div>
-                        <div className="right-nav-login"><Link to="/login">Log In</Link></div>
-                        
-                        <div className="right-nav-signup"><Link to="/register">Sign Up</Link></div>
+                        <LogInLogOut />
                     </div>
-                </nav>  
-            </div>   
+                </nav>
+            </div>
        )
    }
 }

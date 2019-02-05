@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PolicySection from './PolicySection';
 import ContactsResultContainer from './ContactsResultContainer';
-import Emergency from './Emergency';
 
 
 
@@ -10,15 +9,24 @@ class Dashboard extends Component {
 
     constructor() {
         super();
+        const username = localStorage.getItem('username');
+        const userImage = localStorage.getItem('userImage');
+        const userId = localStorage.getItem('userId');
+
+
         this.state = {
-          user: "Casey",
-          displayName: null,
-          userID: null,
-          userIMG: "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/49587660_10155740275492513_1958186675280543744_n.jpg?_nc_cat=102&_nc_ht=scontent-ort2-1.xx&oh=a2cbe05a96d3b30bfb98c244e162a230&oe=5CC14560"
+          user: username,
+          userID: userId,
+          userIMG: userImage
         };
       }
 
    render(){
+
+     var authTokenhas = localStorage.getItem('token');
+     if (!authTokenhas) {
+        window.location = '/login';
+      }
        return (
         <div className="content-container">
             <main role="main">
@@ -32,7 +40,6 @@ class Dashboard extends Component {
                 </header>
                 <PolicySection/>
                 <ContactsResultContainer/>
-                <Emergency/>
             </main>
         </div>
        )
